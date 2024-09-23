@@ -6,9 +6,13 @@
         {
             //Part1();
 
-            Part2();
+            //Part2();
 
             //Part3();
+
+            Part5();
+            
+           //Part4();
         }
 
         public static void Part2()
@@ -59,5 +63,43 @@
             age = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Did you know that in five years you will be " + (age + 5) + " years old? And five years ago you were " + (age - 5) + "! Imagine that!");
         }
-    }
+
+        public static void Part4()
+        {
+            double num1, num2, num3;
+            Console.WriteLine("Hey user. give me a number.");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ok, gimme another number");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Give me one more number");
+            num3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The sum of all these numbers is " + (num1 + num2 + num3) / 2);
+
+
+        }
+        public static void Part5()
+        {
+            double price1, price2;
+            int discount;
+            string name1, name2;
+            Console.WriteLine("Hey, give me the name and price of two items you would like to purchase");
+             = Console.ReadLine();
+            
+
+        }
+
+    }   
+
+
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 }
