@@ -41,6 +41,7 @@
             string name;
             int age;
             double money;
+            
             Console.WriteLine("Hello, what is your name?");
             name = Console.ReadLine();
             Console.WriteLine("Nice to meet you, " + name + ", How old are you?");
@@ -79,12 +80,17 @@
         }
         public static void Part5()
         {
-            double price1, price2;
-            int discount;
-            string name1, name2;
-            Console.WriteLine("Hey, give me the name and price of two items you would like to purchase");
-             = Console.ReadLine();
+            double totalPrice, disPrice, subTotal, tax, price1, price2, item1, item2;
             
+            
+            Console.WriteLine("Hey, give me the name and price of an item you would like to purchase");
+            double.TryParse(Console.ReadLine(), out item1);
+            double.TryParse(Console.ReadLine(), out price1);
+            Console.WriteLine("Okay, now give me another name and price of an item");
+            double.TryParse(Console.ReadLine(), out item2);
+            double.TryParse(Console.ReadLine(), out price2);
+            Console.WriteLine("The total of these two items is " + price1 + price2.ToString());
+
 
         }
 
