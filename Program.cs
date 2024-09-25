@@ -80,18 +80,43 @@
         }
         public static void Part5()
         {
-            double totalPrice, disPrice, subTotal, tax, price1, price2, item1, item2;
-            
-            
-            Console.WriteLine("Hey, give me the name and price of an item you would like to purchase");
-            double.TryParse(Console.ReadLine(), out item1);
+            double totalPrice, discountedPrice, discount, subTotal, tax, price1, price2;
+            string item1, item2;
+
+            Console.WriteLine("Hey, give me the name of an item:");
+            item1 = Console.ReadLine();
+            Console.WriteLine("What is the price of " + item1);
             double.TryParse(Console.ReadLine(), out price1);
-            Console.WriteLine("Okay, now give me another name and price of an item");
-            double.TryParse(Console.ReadLine(), out item2);
+
+
+            Console.WriteLine("Okay, now give me another name:"); 
+            item2 = Console.ReadLine();
+            Console.WriteLine("What is the price of " + item2);
             double.TryParse(Console.ReadLine(), out price2);
-            Console.WriteLine("The total of these two items is " + price1 + price2.ToString());
+
+            subTotal = price1 + price2;
+            discount = subTotal * 0.2;
+            discountedPrice = subTotal - discount;
+            tax = discountedPrice * 0.13;
+            totalPrice = tax + discountedPrice;
+            Console.WriteLine();
+
+            Console.WriteLine("Item 1: " + item1);
+            Console.WriteLine("Price: " + (price1).ToString("C"));
+            Console.WriteLine("Item 2: " + item2);
+            Console.WriteLine("Price: " + (price2).ToString("C"));
+            Console.WriteLine("================");
+            Console.WriteLine("Total price: " + subTotal.ToString("C"));
+            Console.WriteLine("Discount: " + (discount).ToString("C"));
+            Console.WriteLine("Subtotal: " + discountedPrice.ToString("C"));
+            Console.WriteLine("Tax (13%): " + tax.ToString("C"));
+            Console.WriteLine("================");
+            Console.WriteLine("Total owed:" + totalPrice.ToString("C"));
 
 
+
+
+            
         }
 
     }   
